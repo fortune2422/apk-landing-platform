@@ -1,0 +1,23 @@
+name: Unzip
+
+on:
+  workflow_dispatch:   # 手动触发
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Unzip file
+        run: unzip yourfile.zip -d extracted/
+
+      - name: Commit unzipped files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add extracted/
+          git commit -m "Add extracted files" || echo "No changes"
+          git push
