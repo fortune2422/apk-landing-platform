@@ -19,5 +19,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add extracted/
-          git commit -m "Add extracted files" || echo "No changes"
+          git commit -m "Add apk_landing_platform_full files" || echo "No changes"
           git push
