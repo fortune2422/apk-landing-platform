@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Unzip file
-        run: unzip apk_landing_platform_full.zip -d extracted/
+        run: unzip apk_landing_platform_full.zip -d apk_landing_platform_full/
 
       - name: Commit unzipped files
         run: |
