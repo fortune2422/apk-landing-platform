@@ -18,6 +18,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add extracted/
+          git add apk_landing_platform_full files/
           git commit -m "Add apk_landing_platform_full files" || echo "No changes"
           git push
